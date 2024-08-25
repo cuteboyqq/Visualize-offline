@@ -1,0 +1,69 @@
+# config.yaml
+
+# Model configuration
+MODEL:
+  INPUT_WIDTH: 576 # Model input image width
+  INPUT_HEIGHT: 320 # Model input image height
+
+# Mode configuration
+MODE:
+  VISUALIZE_MODE: offline  # Mode of run visualize mode (offline)
+
+# JSON log configuration
+JSONLOG:
+  FROM: camera # Where is the  JSON log from  ('camera')
+
+# Save settings
+SAVE:
+  RAW_IMAGES: false     # Flasg to save raw images
+  AI_RESULT_IMAGE: true  # Flag to save AI result images
+  JSON_LOG: true  # Flag to save JSON log
+
+# Image configuration
+IMAGE:
+  BASE_NAME: 'RawFrame_'  # Base name for image files
+  FORMAT: 'png'  # Format of the image files, jpg is for live mode save raw images, png is for historical mode save raw images
+
+# Resize settings
+RESIZE:
+  ENABLED: false  # Flag to enable or disable image resizing
+  WIDTH:  1600 # Width of the resized images
+  HEIGHT: 900  # Height of the resized images
+
+# Local configuration
+LOCAL:
+  CSV_FILE: '/home/ali/Projects/GitHub_Code/ali/Historical/assets/csv_file/2024-8-25-13-8.txt'  # Path to the local CSV file
+  RAW_IMG_DIR: '/home/ali/Projects/GitHub_Code/ali/Historical/assets/images/2024-8-25-13-8'  # Directory on the local machine for storing raw images or input raw images for offline visualize historical mode
+
+# Display settings
+DISPLAY:
+  SHOW_AI_RESULT_IMAGE: true  # Flag to show AI result images
+  SHOW_DETECT_OBJS: true  # Flag to display detected objects
+  SHOW_TAILING_OBJS: true  # Flag to display tailing objects
+  SHOW_VANISH_LINE: true  # Flag to show vanishing line
+  SHOW_ADAS_RESULT: true  # Flag to show ADAS results
+  SHOW_LANE_INFO: true  # Flag to display lane line information
+  SHOW_TAILING_OBJS_BB_CORNER: true  # Flag to show bounding box corners for trailing objects
+  SHOW_DISTANCE_PLOT: true  # Flag to display distance plot
+  SHOW_DISTANCE_TITLE: true # Flag to display distance title
+  SHOW_DETECT_OBJS_INFO: true # Flag to display detect obj label & confidence
+  SHOW_DEVICE_MODE: true # Flag to display device live/historical mode
+
+# Tailing object configuation
+TAILING_OBJ:
+  BOUDINGBOX_THINKNESS: 2 # Tailing obj bounding box thickness
+  BOUDINGBOX_COLOR_B: 0   # Tailing obj bounding box color Blue
+  BOUDINGBOX_COLOR_G: 255 # Tailing obj bounding box color Green
+  BOUDINGBOX_COLOR_R: 255 # Tailing obj bounding box color Red
+  TEXT_SIZE: 0.60 # Tailing obj text size
+  DISTANCE_DECIMAL_LENGTH: 8 # The length of distance decimal
+
+LANE_LINE:
+  ALPHA: 0.35
+  THICKNESS: 2
+
+# Wait settings
+WAIT:
+  VALUE: 1  # Wait time in milliseconds for image display
+  ZERO_ON_ADAS_EVENT: false  # Flag to set wait time to zero when ADAS event occurs
+  ON_ADAS_EVENT: 1  # Wait time in milliseconds when an ADAS event occurs
